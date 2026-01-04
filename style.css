@@ -525,6 +525,20 @@ a:hover {
     margin: 0 auto;
 }
 
+.walker-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* When there are multiple walkers, use the regular team-grid layout */
+.walker-grid:has(.team-member:nth-child(2)) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 100%;
+}
+
 .team-member {
     background: white;
     padding: 40px;
@@ -1164,6 +1178,11 @@ a:hover {
         grid-template-columns: 1fr;
     }
     
+    .walker-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    
     .philosophy-pillars {
         grid-template-columns: 1fr;
     }
@@ -1181,7 +1200,8 @@ a:hover {
     .philosophy-pillars,
     .specializations-grid,
     .services-grid,
-    .team-grid {
+    .team-grid,
+    .walker-grid {
         grid-template-columns: 1fr;
     }
     
