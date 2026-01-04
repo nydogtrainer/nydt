@@ -125,6 +125,7 @@ a:hover {
     background: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+    color: white;
 }
 
 .btn-secondary {
@@ -202,6 +203,41 @@ a:hover {
     color: var(--accent-color);
 }
 
+.nav-cta {
+    flex-shrink: 0;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* ==========================================
    HERO SECTION
    ========================================== */
@@ -210,13 +246,24 @@ a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 120px 20px 80px;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
+.hero-wrapper {
+    max-width: var(--container-max);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
 .hero-content {
+    flex: 1;
     max-width: 600px;
-    margin-right: 60px;
+    text-align: center;
 }
 
 .hero h1 {
@@ -234,6 +281,8 @@ a:hover {
 .hero-cta {
     display: flex;
     gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .hero-image {
@@ -270,7 +319,7 @@ a:hover {
 
 .philosophy-pillars {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-top: 60px;
 }
@@ -294,6 +343,7 @@ a:hover {
 .pillar p {
     color: var(--text-medium);
     font-size: 0.95rem;
+    margin: 0;
 }
 
 /* ==========================================
@@ -337,6 +387,7 @@ a:hover {
 .spec-card p {
     color: var(--text-medium);
     line-height: 1.6;
+    margin: 0;
 }
 
 /* ==========================================
@@ -360,6 +411,24 @@ a:hover {
     padding: 40px;
     border-radius: 8px;
     border-top: 4px solid var(--accent-color);
+    position: relative;
+}
+
+.service-card.featured-service {
+    background: linear-gradient(135deg, #fff5ec 0%, var(--background-light) 100%);
+    border-top: 4px solid var(--accent-color);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .service-card h3 {
@@ -419,11 +488,41 @@ a:hover {
     background: var(--background-light);
 }
 
+.team-category {
+    margin-bottom: 80px;
+}
+
+.team-category:last-of-type {
+    margin-bottom: 60px;
+}
+
+.team-category-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.team-category-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: var(--text-medium);
+    font-size: 1.05rem;
+}
+
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-    margin-bottom: 60px;
+}
+
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .team-member {
@@ -432,6 +531,10 @@ a:hover {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.team-member.mentor-dog {
+    border-top: 4px solid var(--accent-color);
 }
 
 .team-photo {
@@ -448,7 +551,7 @@ a:hover {
     object-fit: cover;
 }
 
-.team-member h3 {
+.team-member h4 {
     color: var(--primary-color);
     margin-bottom: 5px;
 }
@@ -479,6 +582,7 @@ a:hover {
     color: var(--text-medium);
     line-height: 1.6;
     text-align: left;
+    margin: 0;
 }
 
 .credentials-badges {
@@ -511,6 +615,7 @@ a:hover {
 .badge p {
     color: var(--text-medium);
     font-size: 0.9rem;
+    margin: 0;
 }
 
 /* ==========================================
@@ -580,85 +685,104 @@ a:hover {
 }
 
 /* ==========================================
-   GEAR SECTION
+   CONTACT SECTION
    ========================================== */
 
-.gear {
+.contact {
     padding: var(--section-padding);
     background: var(--background-light);
 }
 
-.gear-intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 60px;
-    color: var(--text-medium);
-    font-size: 1.1rem;
-}
-
-.gear-category {
-    margin-bottom: 60px;
-}
-
-.gear-category h3 {
-    color: var(--primary-color);
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid var(--accent-color);
-}
-
-.gear-grid {
+.contact-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.gear-item {
+.contact-form {
     background: white;
+    padding: 40px;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    transition: transform var(--transition-speed);
 }
 
-.gear-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.gear-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.gear-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gear-item h4 {
-    padding: 20px 20px 10px;
-    color: var(--primary-color);
-}
-
-.gear-item p {
-    padding: 0 20px;
-    color: var(--text-medium);
-    font-size: 0.95rem;
-}
-
-.gear-item .btn-secondary {
-    margin: 20px;
+.form-group label {
     display: block;
-    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
-.gear-note {
-    text-align: center;
-    margin-top: 40px;
-    color: var(--text-light);
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-info {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-method {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-method:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-method strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.contact-method a {
+    color: var(--accent-color);
+}
+
+.contact-method p {
+    color: var(--text-medium);
+    margin: 0;
 }
 
 /* ==========================================
@@ -810,6 +934,174 @@ a:hover {
 }
 
 /* ==========================================
+   GEAR PAGE STYLES
+   ========================================== */
+
+.gear-hero {
+    padding: 140px 20px 60px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.gear-hero h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.gear-hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.gear-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+.gear-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.gear-category {
+    margin-bottom: 80px;
+}
+
+.gear-category h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.category-description {
+    color: var(--text-medium);
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.gear-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.gear-item {
+    background: var(--background-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+}
+
+.gear-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.gear-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: white;
+}
+
+.gear-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gear-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.gear-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.gear-description {
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.gear-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.gear-content .btn-primary {
+    display: block;
+    text-align: center;
+}
+
+.affiliate-disclosure {
+    background: #fff3e0;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    margin-top: 40px;
+}
+
+.affiliate-disclosure h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.affiliate-disclosure p {
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.gear-cta {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    text-align: center;
+}
+
+.gear-cta h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.gear-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.gear-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Active nav link styling for gear page */
+.nav-links a.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
 
@@ -822,32 +1114,58 @@ a:hover {
         font-size: 2rem;
     }
     
-    .hero {
+    .hero-wrapper {
         flex-direction: column;
         text-align: center;
-        padding: 100px 20px 60px;
     }
     
     .hero-content {
-        margin-right: 0;
-        margin-bottom: 40px;
+        max-width: 100%;
     }
     
     .hero-cta {
         justify-content: center;
-        flex-wrap: wrap;
     }
     
     .nav-links {
-        display: none; /* Add mobile menu if needed */
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        gap: 15px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-cta {
+        display: none;
     }
     
     .testimonials-swiper {
         padding: 40px 20px;
     }
     
-    .email-signup {
-        flex-direction: column;
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .operations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-pillars {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -863,13 +1181,27 @@ a:hover {
     .philosophy-pillars,
     .specializations-grid,
     .services-grid,
-    .team-grid,
-    .gear-grid {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
         grid-template-columns: 1fr;
     }
     
     .btn-large {
         padding: 14px 30px;
         font-size: 1rem;
+    }
+    
+    .email-signup {
+        flex-direction: column;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
     }
 }

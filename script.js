@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             delay: 5000,
             disableOnInteraction: false,
         },
+        speed: 600,
         
         // Pagination dots
         pagination: {
@@ -27,16 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        
-        // Responsive breakpoints
-        breakpoints: {
-            768: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 1,
-            }
-        }
     });
     
     // Smooth scrolling for navigation links
@@ -51,11 +42,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: offsetTop,
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                const navLinks = document.querySelector('.nav-links');
+                const mobileToggle = document.getElementById('mobileMenuToggle');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                }
             }
         });
     });
     
-    // Navbar scroll effect (optional - adds shadow on scroll)
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+    
+    // Navbar scroll effect and Back to top button
     let lastScroll = 0;
     const navbar = document.getElementById('navbar');
     const backToTopButton = document.getElementById('backToTop');
@@ -81,22 +91,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Back to top button click handler
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTopButton) {
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
     
-    // Email signup form handling (customize based on your email service)
+    // Contact form handling
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // If you're using a form service (Formspree, Netlify Forms, etc.),
+            // update the form action attribute and this handler accordingly
+            
+            // For now, basic validation
+            const name = this.querySelector('#name').value;
+            const email = this.querySelector('#email').value;
+            const phone = this.querySelector('#phone').value;
+            const dogName = this.querySelector('#dog-name').value;
+            const message = this.querySelector('#message').value;
+            
+            if (!name || !email || !phone || !dogName || !message) {
+                e.preventDefault();
+                alert('Please fill in all required fields');
+                return false;
+            }
+            
+            // If not integrated with a service yet, prevent default and show message
+            // Remove this section once you integrate with a form service
+            e.preventDefault();
+            alert('Thank you for your interest! We will be in touch soon. (Note: Form submission will be active once connected to your email service)');
+            this.reset();
+        });
+    }
+    
+    // Email signup form handling
     const emailForm = document.querySelector('.email-signup');
     
     if (emailForm) {
         emailForm.addEventListener('submit', function(e) {
-            // If you're using a service like Mailchimp, ConvertKit, etc., 
-            // update the form action and this handler accordingly
-            
-            // Example basic validation
             const emailInput = this.querySelector('input[type="email"]');
             if (!emailInput.value) {
                 e.preventDefault();
@@ -111,41 +148,4 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.value = '';
         });
     }
-    
-    // Optional: Add intersection observer for fade-in animations
-    // Uncomment this section if you want elements to fade in as they scroll into view
-    /*
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Add fade-in class to elements you want to animate
-    document.querySelectorAll('.spec-card, .service-card, .team-member').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-    */
 });
-
-// Optional: Add mobile menu toggle if needed
-// Uncomment and customize if you want a hamburger menu for mobile
-/*
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
-
-// Add hamburger button to HTML and call this function
-*/

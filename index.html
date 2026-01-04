@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW YORK DOG TRAINER - Building Relationships, Not Just Obedience</title>
-    <meta name="description" content="Holistic dog training in NYC specializing in reactive dogs and challenging cases. We focus on enrichment, wellness, and the human-dog bond.">
+    <title>NYC Dog Training | Reactive Dogs, Behavioral Modification | New York Dog Trainer</title>
+    <meta name="description" content="Expert dog training in NYC specializing in reactive dogs, separation anxiety & behavioral modification. Holistic approach focusing on the human-dog bond. Serving Manhattan, Brooklyn & the Bronx.">
+    <meta name="keywords" content="dog training NYC, reactive dog training, dog trainer Manhattan, dog trainer Brooklyn, behavioral modification, separation anxiety dogs, puppy training NYC, service dog training">
     
-    <!-- Fonts -->
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nydogtrainer.com/">
+    <meta property="og:title" content="NYC Dog Training - Expert Training for Reactive & Challenging Dogs">
+    <meta property="og:description" content="We specialize in reactive dogs and challenging cases. Building communication, not just obedience.">
+    <meta property="og:image" content="https://nydogtrainer.com/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NYC Dog Training - New York Dog Trainer">
+    <meta name="twitter:description" content="Expert dog training in NYC. Specializing in reactive dogs and behavioral modification.">
+    <meta name="twitter:image" content="https://nydogtrainer.com/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nydogtrainer.com/">
+    
+    <!-- Favicon - ADD YOUR ACTUAL FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fonts with display swap for performance -->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Swiper CSS for testimonials carousel -->
@@ -16,6 +39,54 @@
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "New York Dog Trainer",
+      "description": "Expert dog training in NYC specializing in reactive dogs, behavioral modification, and the human-dog bond.",
+      "url": "https://nydogtrainer.com",
+      "telephone": "+1-XXX-XXX-XXXX",
+      "email": "info@nydogtrainer.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "40.7128",
+        "longitude": "-74.0060"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Manhattan"
+        },
+        {
+          "@type": "City",
+          "name": "Brooklyn"
+        },
+        {
+          "@type": "City",
+          "name": "Bronx"
+        }
+      ],
+      "priceRange": "$$",
+      "image": "https://nydogtrainer.com/images/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/nyraythedogtrainer/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "50"
+      }
+    }
+    </script>
 </head>
 <body>
     
@@ -23,40 +94,58 @@
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="#home">NEW YORK DOG TRAINER</a>
+                <!-- REPLACE WITH YOUR LOGO IMAGE -->
+                <a href="#home">
+                    <!-- <img src="images/nydt-logo.png" alt="NEW YORK DOG TRAINER"> -->
+                    NEW YORK DOG TRAINER
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#gear">Gear</a></li>
+                <li><a href="gear.html">Gear</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Book Now</a>
+            <a href="https://nydogtrainer.simplybook.me" class="btn-primary nav-cta" target="_blank">Book Now</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Building dogs who think, not just obey.</h1>
-            <p class="hero-subtitle">We don't train behaviors—we build communication. Specializing in reactive dogs, challenging cases, and the lifelong bond between you and your dog.</p>
-            <div class="hero-cta">
-                <a href="https://nydogtrainer.simplybook.me" class="btn-primary btn-large" target="_blank">Start Your Journey</a>
-                <a href="#philosophy" class="btn-secondary btn-large">Learn Our Approach</a>
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>Building dogs who think, not just obey.</h1>
+                <p class="hero-subtitle">We don't train behaviors—we build communication. Specializing in reactive dogs, challenging cases, and the lifelong bond between you and your dog.</p>
+                <div class="hero-cta">
+                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary btn-large" target="_blank">Start Your Journey</a>
+                    <a href="#philosophy" class="btn-secondary btn-large">Learn Our Approach</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <!-- REPLACE WITH YOUR HERO IMAGE -->
-            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200" alt="Happy dog with owner in NYC">
+            <div class="hero-image">
+                <!-- REPLACE WITH YOUR HERO IMAGE -->
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200" 
+                     alt="Happy well-trained dog with owner in New York City" 
+                     width="1200" 
+                     height="800"
+                     loading="eager">
+            </div>
         </div>
     </section>
 
-    <!-- Philosophy Section - The NYDT Dog -->
+    <!-- Philosophy Section - The NYDT Approach -->
     <section id="philosophy" class="philosophy">
         <div class="container">
             <div class="section-header">
-                <h2>The NYDT Dog</h2>
+                <h2>The NYDT Approach</h2>
                 <p class="section-subtitle">What we build together</p>
             </div>
             <div class="philosophy-content">
@@ -66,24 +155,32 @@
                     <p>We take a holistic approach because your dog is a whole being, not a set of problems to fix. That means we look at everything: mental enrichment, physical wellness, emotional security, and the quality of communication between you two.</p>
                     
                     <p>Training is just the beginning. We're here for the whole relationship—the frustrating adolescent phase, the life transitions, the breakthrough moments when everything clicks. Because this isn't a six-week program that ends. It's about establishing a partnership that lasts.</p>
-                    
-                    <div class="philosophy-pillars">
-                        <div class="pillar">
-                            <h3>Communication</h3>
-                            <p>Your dog is always talking. We teach you to listen—and respond in ways they understand.</p>
-                        </div>
-                        <div class="pillar">
-                            <h3>Enrichment</h3>
-                            <p>Mental stimulation matters as much as physical exercise. A tired mind is a happy mind.</p>
-                        </div>
-                        <div class="pillar">
-                            <h3>Wellness</h3>
-                            <p>Behavior and health are connected. We look at the whole picture—stress signals, nutrition, environment.</p>
-                        </div>
-                        <div class="pillar">
-                            <h3>Partnership</h3>
-                            <p>This is a relationship, not a hierarchy. We build trust, not compliance.</p>
-                        </div>
+                </div>
+                
+                <div class="philosophy-pillars">
+                    <div class="pillar">
+                        <h3>Communication</h3>
+                        <p>Your dog is always talking. We teach you to listen—and respond in ways they understand.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Partnership</h3>
+                        <p>This is a relationship, not a hierarchy. We build trust, not compliance.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Love</h3>
+                        <p>Real training starts with affection and bond. Positive reinforcement works because your dog wants to connect with you, not because they fear consequences.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Patience</h3>
+                        <p>You need to be a patient guide while your dog learns, makes mistakes, and improves. There's no magic bullet—just consistent, compassionate work.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Enrichment</h3>
+                        <p>Mental stimulation matters as much as physical exercise. A tired mind is a happy mind.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Wellness</h3>
+                        <p>Behavior and health are connected. We look at the whole picture—stress signals, nutrition, environment.</p>
                     </div>
                 </div>
             </div>
@@ -140,36 +237,22 @@
                 <p class="section-subtitle">Training is just the beginning. We're here for the whole journey.</p>
             </div>
             
-            <!-- ADD YOUR ACTUAL SERVICES, PRICING, AND DESCRIPTIONS HERE -->
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Private Training Sessions</h3>
-                    <p>One-on-one sessions tailored to your dog's specific needs and your goals. We come to you—home visits in Manhattan, Brooklyn (Williamsburg, Greenpoint), and the Bronx.</p>
+                    <h3>Obedience & Advanced Training</h3>
+                    <p>One-on-one sessions tailored to your dog's specific needs. From foundation skills to advanced off-leash reliability, we build the communication system you need.</p>
                     <ul class="service-features">
                         <li>Customized training plans</li>
                         <li>In-home or outdoor sessions</li>
-                        <li>Behavior modification protocols</li>
+                        <li>Foundation through advanced skills</li>
                         <li>Ongoing support between sessions</li>
                     </ul>
-                    <p class="service-price">Pricing: Contact for consultation</p>
-                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Book Session</a>
+                    <p class="service-price">Starting at $XXX/session</p>
+                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Book Training</a>
                 </div>
                 
                 <div class="service-card">
-                    <h3>Dog Walking</h3>
-                    <p>Not just exercise—enrichment walks that engage your dog's mind and body. We practice training on every walk, making progress part of the daily routine.</p>
-                    <ul class="service-features">
-                        <li>Mental enrichment focus</li>
-                        <li>Continued training reinforcement</li>
-                        <li>Flexible scheduling</li>
-                        <li>Detailed walk reports</li>
-                    </ul>
-                    <p class="service-price">Pricing: Contact for rates</p>
-                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Book Walking</a>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Behavioral Modification Programs</h3>
+                    <h3>Behavioral Modification</h3>
                     <p>Intensive, structured programs for serious behavior challenges. We create customized protocols for reactivity, aggression, anxiety, and fear-based behaviors.</p>
                     <ul class="service-features">
                         <li>Comprehensive behavior assessment</li>
@@ -177,8 +260,74 @@
                         <li>Written protocols you can follow</li>
                         <li>Progress tracking and adjustments</li>
                     </ul>
-                    <p class="service-price">Pricing: Package rates available</p>
+                    <p class="service-price">Package rates available</p>
+                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Schedule Assessment</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Bootcamp (Board & Train)</h3>
+                    <p>Immersive training experience where your dog lives with us for intensive skill-building. Perfect for busy owners who need faster results or dogs requiring consistent structure.</p>
+                    <ul class="service-features">
+                        <li>2-4 week programs available</li>
+                        <li>Daily training sessions</li>
+                        <li>Structured environment</li>
+                        <li>Transition training for you included</li>
+                    </ul>
+                    <p class="service-price">$XXX/week - Contact for details</p>
+                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Puppy Foundation Program</h3>
+                    <p>Get it right from the start. Critical early socialization, bite inhibition, house training, and building a strong foundation before bad habits form.</p>
+                    <ul class="service-features">
+                        <li>Age-appropriate socialization</li>
+                        <li>Prevent common puppy problems</li>
+                        <li>House training protocols</li>
+                        <li>Foundation obedience</li>
+                    </ul>
+                    <p class="service-price">Package starting at $XXX</p>
+                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Start Puppy Training</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Service Dog Preparation</h3>
+                    <p>Specialized training for dogs being prepared for service work. Task training, public access skills, and certification preparation with expert guidance.</p>
+                    <ul class="service-features">
+                        <li>Task-specific training</li>
+                        <li>Public access preparation</li>
+                        <li>Certification readiness</li>
+                        <li>Ongoing skill maintenance</li>
+                    </ul>
+                    <p class="service-price">Custom programs - Contact for consultation</p>
                     <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Schedule Consultation</a>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Dog Walking</h3>
+                    <p>Not just exercise—enrichment walks that engage your dog's mind and body. Led by trained professionals, our 1-on-1 walks (no multi-dog groups) reinforce training with every outing.</p>
+                    <ul class="service-features">
+                        <li>Exclusively 1-on-1 walks (no groups)</li>
+                        <li>Mental enrichment focus</li>
+                        <li>Continued training reinforcement</li>
+                        <li>Flexible scheduling & lengths</li>
+                    </ul>
+                    <p class="service-price">Rates vary by walk length</p>
+                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Book Walking</a>
+                </div>
+                
+                <div class="service-card featured-service">
+                    <div class="featured-badge">Unique to NYDT</div>
+                    <h3>Structured Play Dates with Mentor Dogs</h3>
+                    <p>Your dog struggles with other dogs? Our trained mentor dogs teach appropriate play and social skills in controlled sessions. Perfect for dogs who need to learn canine communication.</p>
+                    <ul class="service-features">
+                        <li>Supervised by professional trainers</li>
+                        <li>Carefully matched mentor dogs</li>
+                        <li>Gradual socialization protocols</li>
+                        <li>Safe, controlled environment</li>
+                    </ul>
+                    <p class="service-price">$XXX/session</p>
+                    <a href="https://nydogtrainer.simplybook.me" class="btn-primary" target="_blank">Book Play Date</a>
                 </div>
             </div>
             
@@ -196,40 +345,115 @@
                 <p class="section-subtitle">Credentials that matter, experience you can trust</p>
             </div>
             
-            <!-- ADD YOUR ACTUAL TEAM MEMBERS HERE -->
-            <div class="team-grid">
-                <div class="team-member">
-                    <!-- REPLACE WITH ACTUAL TRAINER PHOTO -->
-                    <div class="team-photo">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400" alt="Trainer Name">
+            <!-- LEAD TRAINERS -->
+            <div class="team-category">
+                <h3 class="team-category-title">Lead Trainers</h3>
+                <div class="team-grid">
+                    <!-- ADD YOUR ACTUAL LEAD TRAINERS HERE -->
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <!-- REPLACE WITH ACTUAL TRAINER PHOTO -->
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400" alt="Trainer Name">
+                        </div>
+                        <h4>[Lead Trainer Name]</h4>
+                        <p class="team-title">Founder & Lead Trainer</p>
+                        <div class="team-credentials">
+                            <span class="credential">Certified Professional Dog Trainer</span>
+                            <span class="credential">Service Dog Training Expert</span>
+                            <span class="credential">Positive Reinforcement Specialist</span>
+                        </div>
+                        <p class="team-bio">
+                            [Add bio here - background, specializations, philosophy, what drives you to do this work. Focus on experience with challenging cases and the human-dog bond.]
+                        </p>
                     </div>
-                    <h3>[Lead Trainer Name]</h3>
-                    <p class="team-title">Founder & Lead Trainer</p>
-                    <div class="team-credentials">
-                        <span class="credential">Certified Professional Dog Trainer</span>
-                        <span class="credential">Service Dog Training Expert</span>
-                        <span class="credential">Positive Reinforcement Specialist</span>
-                    </div>
-                    <p class="team-bio">
-                        <!-- ADD ACTUAL BIO HERE -->
-                        [Add bio here - background, specializations, philosophy, what drives you to do this work. 2-3 sentences about why you're passionate about challenging cases and the human-dog bond.]
-                    </p>
+                    
+                    <!-- ADD MORE LEAD TRAINERS AS NEEDED -->
                 </div>
-                
-                <!-- ADD MORE TEAM MEMBERS AS NEEDED -->
-                <div class="team-member">
-                    <div class="team-photo">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" alt="Trainer Name">
+            </div>
+            
+            <!-- MENTOR DOGS -->
+            <div class="team-category">
+                <h3 class="team-category-title">Our Mentor Dogs</h3>
+                <p class="team-category-description">These are our trained dogs who help teach appropriate play and social skills during structured play dates. They're calm, well-socialized, and excellent communicators in the canine world.</p>
+                <div class="team-grid">
+                    <!-- ADD YOUR ACTUAL MENTOR DOGS HERE -->
+                    <div class="team-member mentor-dog">
+                        <div class="team-photo">
+                            <!-- REPLACE WITH ACTUAL DOG PHOTO -->
+                            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400" alt="Mentor Dog Name">
+                        </div>
+                        <h4>[Mentor Dog Name]</h4>
+                        <p class="team-title">[Breed] • Age [X]</p>
+                        <p class="team-bio">
+                            [What makes this dog a great mentor? Temperament, training background, what they're good at teaching other dogs. Example: "Calm, patient, excellent with anxious dogs. Specializes in teaching appropriate play boundaries."]
+                        </p>
                     </div>
-                    <h3>[Trainer Name]</h3>
-                    <p class="team-title">Associate Trainer</p>
-                    <div class="team-credentials">
-                        <span class="credential">Certified Trainer</span>
-                        <span class="credential">Specialization Area</span>
+                    
+                    <!-- ADD MORE MENTOR DOGS -->
+                    <div class="team-member mentor-dog">
+                        <div class="team-photo">
+                            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400" alt="Mentor Dog Name">
+                        </div>
+                        <h4>[Mentor Dog Name]</h4>
+                        <p class="team-title">[Breed] • Age [X]</p>
+                        <p class="team-bio">
+                            [What makes this dog a great mentor?]
+                        </p>
                     </div>
-                    <p class="team-bio">
-                        [Add bio here]
-                    </p>
+                </div>
+            </div>
+            
+            <!-- DOG WALKERS -->
+            <div class="team-category">
+                <h3 class="team-category-title">Professional Dog Walkers</h3>
+                <p class="team-category-description">Our walkers aren't just exercise providers—they're trained professionals who reinforce training on every 1-on-1 walk.</p>
+                <div class="team-grid">
+                    <!-- ADD YOUR ACTUAL DOG WALKERS HERE -->
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Walker Name">
+                        </div>
+                        <h4>[Walker Name]</h4>
+                        <p class="team-title">Professional Dog Walker</p>
+                        <div class="team-credentials">
+                            <span class="credential">Training-Reinforcement Specialist</span>
+                        </div>
+                        <p class="team-bio">
+                            [Add bio - training background, approach to enrichment walks, experience with different dog types]
+                        </p>
+                    </div>
+                    
+                    <!-- ADD MORE WALKERS -->
+                </div>
+            </div>
+            
+            <!-- OPERATIONS -->
+            <div class="team-category">
+                <h3 class="team-category-title">Operations</h3>
+                <div class="operations-grid">
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <!-- REPLACE WITH YOUR PHOTO -->
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Your Name">
+                        </div>
+                        <h4>[Your Name]</h4>
+                        <p class="team-title">Operations & Management</p>
+                        <p class="team-bio">
+                            [Add your bio - what you handle behind the scenes, your role in keeping everything running smoothly]
+                        </p>
+                    </div>
+                    
+                    <div class="team-member mentor-dog">
+                        <div class="team-photo">
+                            <!-- REPLACE WITH YOUR DOG'S PHOTO -->
+                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400" alt="Your Dog's Name">
+                        </div>
+                        <h4>[Your Dog's Name]</h4>
+                        <p class="team-title">Chief Morale Officer & Gear Tester</p>
+                        <p class="team-bio">
+                            Embodies the NYDT Dog standard. Tests all recommended gear, keeps team morale high, and demonstrates what's possible when training meets love and patience.
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -270,19 +494,6 @@
                 <div class="swiper-wrapper">
                     
                     <!-- ADD YOUR ACTUAL TESTIMONIALS HERE -->
-                    <!-- Template for each testimonial -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-quote">
-                                <p>"[Add actual testimonial quote here. Make it detailed and specific - what problem did you solve? What changed? How do they feel now?]"</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <p class="author-name">[Client Name]</p>
-                                <p class="author-dog">[Dog's Name] - [Breed if relevant]</p>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-quote">
@@ -319,6 +530,18 @@
                         </div>
                     </div>
                     
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <p>"The structured play dates with their mentor dogs were exactly what our anxious pup needed. Watching him learn to play confidently with another dog for the first time brought me to tears. NYDT's approach is genuinely different."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">Amanda R.</p>
+                                <p class="author-dog">Buddy - Rescue Terrier</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 
                 <!-- Pagination -->
@@ -331,81 +554,68 @@
         </div>
     </section>
 
-    <!-- Gear Recommendations Section -->
-    <section id="gear" class="gear">
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Gear We Actually Recommend</h2>
-                <p class="section-subtitle">The tools we use and trust—no fluff, no gimmicks</p>
+                <h2>Let's Start the Conversation</h2>
+                <p class="section-subtitle">Tell us about you and your dog</p>
             </div>
             
-            <p class="gear-intro">We only recommend gear we actually use with our clients. These are the products that make training easier, enrichment better, and life with your dog more enjoyable.</p>
-            
-            <!-- ADD YOUR ACTUAL AFFILIATE LINKS AND PRODUCTS HERE -->
-            <div class="gear-categories">
-                
-                <div class="gear-category">
-                    <h3>Leashes & Harnesses</h3>
-                    <div class="gear-grid">
-                        <div class="gear-item">
-                            <div class="gear-image">
-                                <!-- REPLACE WITH PRODUCT IMAGE -->
-                                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400" alt="Product name">
-                            </div>
-                            <h4>[Product Name]</h4>
-                            <p>[Why we recommend it - what makes it better than alternatives]</p>
-                            <a href="[YOUR AFFILIATE LINK]" class="btn-secondary" target="_blank">View Product</a>
+            <div class="contact-content">
+                <form class="contact-form" action="[YOUR FORM HANDLER]" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        
-                        <!-- Add more products -->
-                    </div>
-                </div>
-                
-                <div class="gear-category">
-                    <h3>Enrichment & Toys</h3>
-                    <div class="gear-grid">
-                        <div class="gear-item">
-                            <div class="gear-image">
-                                <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400" alt="Product name">
-                            </div>
-                            <h4>[Product Name]</h4>
-                            <p>[Why we recommend it]</p>
-                            <a href="[YOUR AFFILIATE LINK]" class="btn-secondary" target="_blank">View Product</a>
+                        <div class="form-group">
+                            <label for="dog-name">Dog's Name / Breed *</label>
+                            <input type="text" id="dog-name" name="dog-name" placeholder="e.g., Max / Golden Retriever" required>
                         </div>
                     </div>
-                </div>
-                
-                <div class="gear-category">
-                    <h3>Training Tools</h3>
-                    <div class="gear-grid">
-                        <div class="gear-item">
-                            <div class="gear-image">
-                                <img src="https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=400" alt="Product name">
-                            </div>
-                            <h4>[Product Name]</h4>
-                            <p>[Why we recommend it]</p>
-                            <a href="[YOUR AFFILIATE LINK]" class="btn-secondary" target="_blank">View Product</a>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us about your dog and what you're looking for *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="What challenges are you facing? What are your goals?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-large">Send Message</button>
+                </form>
                 
-                <div class="gear-category">
-                    <h3>Wellness & Nutrition</h3>
-                    <div class="gear-grid">
-                        <div class="gear-item">
-                            <div class="gear-image">
-                                <img src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?w=400" alt="Product name">
-                            </div>
-                            <h4>[Product Name]</h4>
-                            <p>[Why we recommend it]</p>
-                            <a href="[YOUR AFFILIATE LINK]" class="btn-secondary" target="_blank">View Product</a>
+                <div class="contact-info">
+                    <h3>Other Ways to Reach Us</h3>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <strong>Book Directly:</strong>
+                            <a href="https://nydogtrainer.simplybook.me" target="_blank">nydogtrainer.simplybook.me</a>
+                        </div>
+                        <div class="contact-method">
+                            <strong>Email:</strong>
+                            <a href="mailto:info@nydogtrainer.com">info@nydogtrainer.com</a>
+                        </div>
+                        <div class="contact-method">
+                            <strong>Instagram:</strong>
+                            <a href="https://www.instagram.com/nyraythedogtrainer/" target="_blank">@nyraythedogtrainer</a>
+                        </div>
+                        <div class="contact-method">
+                            <strong>Service Areas:</strong>
+                            <p>Manhattan, Brooklyn (Williamsburg, Greenpoint), and the Bronx</p>
                         </div>
                     </div>
                 </div>
-                
             </div>
-            
-            <p class="gear-note"><small>Note: These are affiliate links. When you purchase through these links, we receive a small commission at no extra cost to you. We only recommend products we genuinely use and believe in.</small></p>
         </div>
     </section>
 
@@ -425,7 +635,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -437,11 +647,12 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#philosophy">Our Philosophy</a></li>
+                        <li><a href="#philosophy">Our Approach</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#team">Meet the Team</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#gear">Gear Recommendations</a></li>
+                        <li><a href="gear.html">Gear Recommendations</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -450,7 +661,7 @@
                     <ul>
                         <li><a href="https://nydogtrainer.simplybook.me" target="_blank">Book Now</a></li>
                         <li><a href="https://www.instagram.com/nyraythedogtrainer/" target="_blank">Instagram</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#dbb2b5bdb49bb5a2bfb4bcafa9bab2b5bea9f5b8b4b6">Email Us</a></li>
+                        <li><a href="mailto:info@nydogtrainer.com">Email Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -469,4 +680,9 @@
     </button>
 
     <!-- Swiper JS -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https:/
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
