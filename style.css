@@ -179,12 +179,19 @@ a:hover {
     align-items: center;
 }
 
+.logo {
+    flex-shrink: 0;
+}
+
 .logo a {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: 1px;
+    display: block;
+    line-height: 0;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
