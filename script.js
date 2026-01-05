@@ -105,10 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // If you're using a form service (Formspree, Netlify Forms, etc.),
-            // update the form action attribute and this handler accordingly
-            
-            // For now, basic validation
+            // Basic validation before Formspree submission
             const name = this.querySelector('#name').value;
             const email = this.querySelector('#email').value;
             const phone = this.querySelector('#phone').value;
@@ -121,31 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 return false;
             }
             
-            // If not integrated with a service yet, prevent default and show message
-            // Remove this section once you integrate with a form service
-            e.preventDefault();
-            alert('Thank you for your interest! We will be in touch soon. (Note: Form submission will be active once connected to your email service)');
-            this.reset();
+            // Form will now submit to Formspree
+            // Formspree will handle the redirect and confirmation
         });
     }
     
-    // Email signup form handling
-    const emailForm = document.querySelector('.email-signup');
-    
-    if (emailForm) {
-        emailForm.addEventListener('submit', function(e) {
-            const emailInput = this.querySelector('input[type="email"]');
-            if (!emailInput.value) {
-                e.preventDefault();
-                alert('Please enter a valid email address');
-                return false;
-            }
-            
-            // If not integrated with a service yet, prevent default and show message
-            // Remove this section once you integrate with an email service
-            e.preventDefault();
-            alert('Thank you for your interest! Email signup will be active soon.');
-            emailInput.value = '';
-        });
-    }
+    // Brevo handles the email signup form
+    // No additional JavaScript needed for newsletter signup
 });

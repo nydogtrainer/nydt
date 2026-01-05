@@ -207,6 +207,11 @@ a:hover {
     flex-shrink: 0;
 }
 
+/* Hide mobile Book Now button on desktop */
+.mobile-only {
+    display: none;
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -483,6 +488,62 @@ a:hover {
    TEAM SECTION
    ========================================== */
 
+/* ==========================================
+   PACKAGES CTA BANNER
+   ========================================== */
+
+.packages-cta {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    text-align: center;
+    color: white;
+}
+
+.packages-cta h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.packages-cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.packages-cta .btn-secondary {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid white;
+}
+
+.packages-cta .btn-secondary:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .packages-cta {
+        padding: 50px 20px;
+    }
+    
+    .packages-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .packages-cta-description {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================
+   TEAM SECTION
+   ========================================== */
+
 .team {
     padding: var(--section-padding);
     background: var(--background-light);
@@ -698,6 +759,15 @@ a:hover {
     background: var(--accent-color);
 }
 
+.testimonials-external-link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.testimonials-external-link .btn-secondary {
+    display: inline-block;
+}
+
 /* ==========================================
    CONTACT SECTION
    ========================================== */
@@ -844,6 +914,128 @@ a:hover {
 
 .email-signup button {
     white-space: nowrap;
+}
+
+/* Override Brevo form styles to match site branding */
+#sib-container {
+    background: transparent !important;
+    border: none !important;
+}
+
+.facility .sib-form-message-panel {
+    margin: 20px auto !important;
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+.facility .email-signup input {
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+.facility .email-signup button {
+    background-color: var(--accent-color) !important;
+    border: none !important;
+    font-family: 'Work Sans', sans-serif !important;
+    font-weight: 600 !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.facility .email-signup button:hover {
+    background-color: var(--accent-hover) !important;
+}
+
+.facility .sib-hide-loader-icon {
+    display: none !important;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+/* ==========================================
+   THANK YOU PAGES
+   ========================================== */
+
+.thank-you-section {
+    padding: 120px 20px 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.thank-you-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.thank-you-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.thank-you-content h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.thank-you-message {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.thank-you-submessage {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.85;
+}
+
+.thank-you-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .thank-you-section {
+        padding: 100px 20px 60px;
+    }
+    
+    .thank-you-content h1 {
+        font-size: 2rem;
+    }
+    
+    .thank-you-message {
+        font-size: 1.1rem;
+    }
+    
+    .thank-you-submessage {
+        font-size: 1rem;
+    }
+    
+    .thank-you-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .thank-you-buttons a {
+        width: 100%;
+    }
 }
 
 /* ==========================================
@@ -1022,15 +1214,21 @@ a:hover {
 
 .gear-image {
     width: 100%;
-    height: 250px;
+    height: 300px;
     overflow: hidden;
     background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .gear-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .gear-content {
@@ -1156,6 +1354,30 @@ a:hover {
     
     .nav-links.active {
         display: flex;
+    }
+    
+    /* Show mobile Book Now in burger menu */
+    .mobile-only {
+        display: block;
+        margin-top: 10px;
+        padding-top: 15px;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .mobile-book-btn {
+        display: block;
+        background: var(--accent-color);
+        color: white !important;
+        padding: 12px 20px;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .mobile-book-btn:hover {
+        background: var(--accent-hover);
+        color: white !important;
     }
     
     .mobile-menu-toggle {
