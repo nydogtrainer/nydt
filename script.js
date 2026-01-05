@@ -58,10 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navLinks = document.querySelector('.nav-links');
     
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Mobile menu clicked'); // Debug log
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
+        });
+    } else {
+        console.error('Mobile menu elements not found:', {
+            toggle: !!mobileMenuToggle,
+            navLinks: !!navLinks
         });
     }
     
@@ -70,25 +77,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('navbar');
     const backToTopButton = document.getElementById('backToTop');
     
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        // Navbar shadow effect
-        if (currentScroll > 100) {
-            navbar.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-        } else {
-            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-        }
-        
-        // Back to top button visibility
-        if (currentScroll > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-        
-        lastScroll = currentScroll;
-    });
+    if (navbar && backToTopButton) {
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            // Navbar shadow effect
+            if (currentScroll > 100) {
+                navbar.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+            
+            // Back to top button visibility
+            if (currentScroll > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    }
     
     // Back to top button click handler
     if (backToTopButton) {
