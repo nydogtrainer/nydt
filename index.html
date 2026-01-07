@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <script async src="https://www.googletagmanager.com/gtag/js?id=G-R68CR7SFCX"></script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R68CR7SFCX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,6 +21,7 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "uxkmn7lh7q");
     </script>
+    
     <title>NEW YORK DOG TRAINER | From Puppyhood to Complex Challenges</title>
     <meta name="description" content="Expert dog training in NYC. From foundation puppy training to reactive dogs and behavioral challenges. Holistic approach building communication and the human-dog bond. Serving Manhattan, Brooklyn & the Bronx.">
     <meta name="keywords" content="dog training NYC, puppy training NYC, dog trainer Manhattan, dog trainer Brooklyn, reactive dog training, behavioral modification, separation anxiety, service dog training, rescue dog training, adolescent dog training, mentor dogs NYC">
@@ -39,7 +42,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nydogtrainer.com/">
     
-    <!-- Favicon - ADD YOUR ACTUAL FAVICON -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
     
     <!-- Preconnect for performance -->
@@ -110,10 +113,8 @@
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <!-- REPLACE WITH YOUR LOGO IMAGE -->
                 <a href="#home">
                  <img src="images/logo/nydt-logo.png" alt="NEW YORK DOG TRAINER">
-                 
                 </a>
             </div>
             <ul class="nav-links">
@@ -121,11 +122,11 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="gear.html">Gear</a></li>
+                <li><a href="gear.html" onclick="gtag('event', 'gear_page_click', {'event_category': 'navigation', 'event_label': 'main_nav'});">Gear</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="mobile-only"><a href="https://nydogtrainer.simplybook.me/v2/#book" class="mobile-book-btn" target="_blank">Book Now</a></li>
+                <li class="mobile-only"><a href="https://nydogtrainer.simplybook.me/v2/#book" class="mobile-book-btn" target="_blank" onclick="gtag('event', 'booking_click', {'event_category': 'conversion', 'event_label': 'mobile_menu'});">Book Now</a></li>
             </ul>
-            <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary nav-cta" target="_blank">Book Now</a>
+            <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary nav-cta" target="_blank" onclick="gtag('event', 'booking_click', {'event_category': 'conversion', 'event_label': 'nav_cta'});">Book Now</a>
             
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
@@ -143,12 +144,11 @@
                 <h1>Empowering Owners. Transforming Dogs.</h1>
                 <p class="hero-subtitle">From puppies to complex cases. A holistic approach to building partnerships that last. Serving Manhattan, Brooklyn (Williamsburg, Greenpoint), and the Bronx.</p>
                 <div class="hero-cta">
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary btn-large" target="_blank">Start Your Journey</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary btn-large" target="_blank" onclick="gtag('event', 'booking_click', {'event_category': 'conversion', 'event_label': 'hero_primary'});">Start Your Journey</a>
                     <a href="#philosophy" class="btn-secondary btn-large">Learn Our Approach</a>
                 </div>
             </div>
             <div class="hero-image">
-                <!-- REPLACE WITH YOUR HERO IMAGE -->
                 <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200" 
                      alt="Happy well-trained dog with owner in New York City" 
                      width="1200" 
@@ -259,7 +259,7 @@
                         <li>Ongoing support between sessions</li>
                     </ul>
                     <p class="service-price">Package rates available</p>
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank">Book Training</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank" onclick="gtag('event', 'service_booking', {'event_category': 'services', 'event_label': 'obedience_training'});">Book Training</a>
                 </div>
                 
                 <div class="service-card">
@@ -272,7 +272,7 @@
                         <li>Progress tracking and adjustments</li>
                     </ul>
                     <p class="service-price">Package rates available</p>
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank">Schedule Assessment</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank" onclick="gtag('event', 'service_booking', {'event_category': 'services', 'event_label': 'behavioral_modification'});">Schedule Assessment</a>
                 </div>
                 
                 <div class="service-card">
@@ -285,7 +285,7 @@
                         <li>Transition training for you included</li>
                     </ul>
                     <p class="service-price">Package rates available</p>
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank">Learn More</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank" onclick="gtag('event', 'service_booking', {'event_category': 'services', 'event_label': 'bootcamp'});">Learn More</a>
                 </div>
                 
                 <div class="service-card">
@@ -298,7 +298,7 @@
                         <li>Foundation obedience</li>
                     </ul>
                     <p class="service-price">Package rates available</p>
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank">Start Puppy Training</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank" onclick="gtag('event', 'service_booking', {'event_category': 'services', 'event_label': 'puppy_foundation'});">Start Puppy Training</a>
                 </div>
                 
                 <div class="service-card">
@@ -311,7 +311,7 @@
                         <li>Ongoing skill maintenance</li>
                     </ul>
                     <p class="service-price">Package rates available</p>
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank">Schedule Consultation</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank" onclick="gtag('event', 'service_booking', {'event_category': 'services', 'event_label': 'service_dog_prep'});">Schedule Consultation</a>
                 </div>
                 
                 <div class="service-card featured-service">
@@ -325,7 +325,7 @@
                         <li>Safe, controlled environment</li>
                     </ul>
                     <p class="service-price">Package rates available</p>
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank">Book Play Date</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank" onclick="gtag('event', 'service_booking', {'event_category': 'services', 'event_label': 'mentor_dog_playdate'});">Book Play Date</a>
                 </div>
                 
                 <div class="service-card">
@@ -338,7 +338,7 @@
                         <li>Flexible scheduling & lengths</li>
                     </ul>
                     <p class="service-price">Rates vary by walk length</p>
-                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank">Book Walking</a>
+                    <a href="https://nydogtrainer.simplybook.me/v2/#book" class="btn-primary" target="_blank" onclick="gtag('event', 'service_booking', {'event_category': 'services', 'event_label': 'dog_walking'});">Book Walking</a>
                 </div>
             </div>
             
@@ -353,7 +353,7 @@
         <div class="container">
             <h2>Save with Training Packages</h2>
             <p class="packages-cta-description">Commit to your dog's growth and save up to 20% with our multi-session packages.</p>
-            <a href="https://nydogtrainer.simplybook.me/v2/#packages" class="btn-secondary btn-large" target="_blank">View Package Options</a>
+            <a href="https://nydogtrainer.simplybook.me/v2/#packages" class="btn-secondary btn-large" target="_blank" onclick="gtag('event', 'packages_click', {'event_category': 'conversion', 'event_label': 'package_banner'});">View Package Options</a>
         </div>
     </section>
 
@@ -369,10 +369,8 @@
             <div class="team-category">
                 <h3 class="team-category-title">Lead Trainers</h3>
                 <div class="team-grid">
-                    <!-- ADD YOUR ACTUAL LEAD TRAINERS HERE -->
                     <div class="team-member">
                         <div class="team-photo">
-                            <!-- REPLACE WITH ACTUAL TRAINER PHOTO -->
                             <img src="images/team/ray.jpg" alt="Ray">
                         </div>
                         <h4>Ray</h4>
@@ -383,11 +381,9 @@
                             <span class="credential">Positive Reinforcement Specialist</span>
                         </div>
                         <p class="team-bio">
-                            With over 15 years of experience, Ray leads our training program with a focus on structure, clarity, and communication. Known for his calm, results-driven approach, he’s helped countless dogs and owners build lasting trust and balance.
+                            With over 15 years of experience, Ray leads our training program with a focus on structure, clarity, and communication. Known for his calm, results-driven approach, he's helped countless dogs and owners build lasting trust and balance.
                         </p>
                     </div>
-                    
-                    <!-- ADD MORE LEAD TRAINERS AS NEEDED -->
                 </div>
             </div>
             
@@ -396,20 +392,16 @@
                 <h3 class="team-category-title">Our Mentor Dogs</h3>
                 <p class="team-category-description">These are our trained dogs who help teach appropriate play and social skills during structured play dates. They're calm, well-socialized, and excellent communicators in the canine world.</p>
                 <div class="team-grid">
-                    <!-- ADD YOUR ACTUAL MENTOR DOGS HERE -->
                     <div class="team-member mentor-dog">
                         <div class="team-photo">
-                            <!-- REPLACE WITH ACTUAL DOG PHOTO -->
-                            <img src="images/team/hope.jpg" alt="MIs Hope">
+                            <img src="images/team/hope.jpg" alt="Miss Hope">
                         </div>
-                        <h4>MIs Hope</h4>
+                        <h4>Miss Hope</h4>
                         <p class="team-title">Pit Bull • Age 5</p>
                         <p class="team-bio">
                             Miss Hope is a multi-talented pit bull and certified service dog who plays a key role in our training program. As our lead dog, she helps guide and model behavior for other dogs, ensuring every session reaches the next level of focus and confidence.
                         </p>
                     </div>
-                    
-                    <!-- ADD MORE MENTOR DOGS -->
                     
                     <div class="team-member mentor-dog">
                         <div class="team-photo">
@@ -418,7 +410,7 @@
                         <h4>Valentina</h4>
                         <p class="team-title">Mini Goldendoodle • Age 2</p>
                         <p class="team-bio">
-                            Valentina is the newest member of our pack and a dedicated training dog. Intelligent, eager, and affectionate, she’s quickly mastering new skills and helping demonstrate calm, structured behavior alongside our senior dogs.
+                            Valentina is the newest member of our pack and a dedicated training dog. Intelligent, eager, and affectionate, she's quickly mastering new skills and helping demonstrate calm, structured behavior alongside our senior dogs.
                         </p>
                     </div>
                 </div>
@@ -429,7 +421,6 @@
                 <h3 class="team-category-title">Professional Dog Walkers</h3>
                 <p class="team-category-description">Our walkers aren't just exercise providers—they're trained professionals who reinforce training on every 1-on-1 walk.</p>
                 <div class="walker-grid">
-                    <!-- ADD YOUR ACTUAL DOG WALKERS HERE -->
                     <div class="team-member">
                         <div class="team-photo">
                             <img src="images/team/miguel.jpg" alt="Miguel">
@@ -443,8 +434,6 @@
                             Miguel is an expert dog walker trained by Ray and known for his calm, reliable approach with every dog he handles. A lifelong dog lover and fitness enthusiast, he brings energy and consistency to each walk and specializes in working with high-energy and reactive dogs.
                         </p>
                     </div>
-                    
-                    <!-- ADD MORE WALKERS -->
                 </div>
             </div>
             
@@ -454,7 +443,6 @@
                 <div class="operations-grid">
                     <div class="team-member">
                         <div class="team-photo">
-                            <!-- REPLACE WITH YOUR PHOTO -->
                             <img src="images/team/rodri.jpg" alt="Rodrigo">
                         </div>
                         <h4>Rodrigo</h4>
@@ -466,7 +454,6 @@
                     
                     <div class="team-member mentor-dog">
                         <div class="team-photo">
-                            <!-- REPLACE WITH YOUR DOG'S PHOTO -->
                             <img src="images/team/lunar.jpg" alt="Lunar">
                         </div>
                         <h4>Lunar</h4>
@@ -514,11 +501,10 @@
             <div class="swiper testimonials-swiper">
                 <div class="swiper-wrapper">
                     
-                    <!-- ADD YOUR ACTUAL TESTIMONIALS HERE -->
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-quote">
-                                <p>"We have been working with Ray since spring 2023, when our sheltie puppy was just 6 months old. Ray has trained our dog to not only be happy and confident, but to also assist me as a trained service dog. It’s amazing to see how with Ray’s training, our dog can switch between “working” (both working for me and behaving PERFECTLY in public, stressful settings) and still be able to return to being a dog and having fun when he’s not working. He just turned 1 and people who witness his behavior are amazing at how well behaved he is and they don’t even know how young he is. This is all the thanks to Ray’s training. Ray is incredibly passionate about what he does and it shows. Most importantly our now 1 year old dog LOVES him. We couldn’t recommend Ray more!"</p>
+                                <p>"We have been working with Ray since spring 2023, when our sheltie puppy was just 6 months old. Ray has trained our dog to not only be happy and confident, but to also assist me as a trained service dog. It's amazing to see how with Ray's training, our dog can switch between "working" (both working for me and behaving PERFECTLY in public, stressful settings) and still be able to return to being a dog and having fun when he's not working. He just turned 1 and people who witness his behavior are amazing at how well behaved he is and they don't even know how young he is. This is all the thanks to Ray's training. Ray is incredibly passionate about what he does and it shows. Most importantly our now 1 year old dog LOVES him. We couldn't recommend Ray more!"</p>
                             </div>
                             <div class="testimonial-author">
                                 <p class="author-name">Ashley V.</p>
@@ -530,7 +516,7 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-quote">
-                                <p>"I would definitely recommend Ray for any and all dog training needs. He’s extremely intuitive and understands how dogs perceive everything we do through their eyes. He has helped us foster an extremely strong bond with our dog, Bao, and has helped us with his training tremendously. Ray is charismatic, trustworthy and reliable. You can’t go wrong with Ray."</p>
+                                <p>"I would definitely recommend Ray for any and all dog training needs. He's extremely intuitive and understands how dogs perceive everything we do through their eyes. He has helped us foster an extremely strong bond with our dog, Bao, and has helped us with his training tremendously. Ray is charismatic, trustworthy and reliable. You can't go wrong with Ray."</p>
                             </div>
                             <div class="testimonial-author">
                                 <p class="author-name">Alexandra S.</p>
@@ -542,7 +528,7 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-quote">
-                                <p>"Ray is the best! He really shows you how to communicate with your dog. Our girl was a puppy when we first saw Ray and we wanted to establish good habits. It’s amazing seeing Ray work with our girl, and the way he teaches us as dog parents is incredibly thoughtful and thorough. He’s great at explaining and teaching so that I can make sure I’m doing right by her. He truly cares and has so much love and passion for dogs. I would highly recommend Ray."</p>
+                                <p>"Ray is the best! He really shows you how to communicate with your dog. Our girl was a puppy when we first saw Ray and we wanted to establish good habits. It's amazing seeing Ray work with our girl, and the way he teaches us as dog parents is incredibly thoughtful and thorough. He's great at explaining and teaching so that I can make sure I'm doing right by her. He truly cares and has so much love and passion for dogs. I would highly recommend Ray."</p>
                             </div>
                             <div class="testimonial-author">
                                 <p class="author-name">Lyllian F.</p>
@@ -554,7 +540,7 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-quote">
-                                <p>"Our experience at New York dog trainer was beyond expectations. The team was patient, knowledgeable, and genuinely cared about our pup’s progress. Their guidance transformed our dog’s behavior, making home life so much easier. Highly recommend their obedience training!"</p>
+                                <p>"Our experience at New York dog trainer was beyond expectations. The team was patient, knowledgeable, and genuinely cared about our pup's progress. Their guidance transformed our dog's behavior, making home life so much easier. Highly recommend their obedience training!"</p>
                             </div>
                             <div class="testimonial-author">
                                 <p class="author-name">Ronald B.</p>
@@ -562,7 +548,8 @@
                             </div>
                         </div>
                     </div>
-                  <div class="swiper-slide">
+                    
+                    <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-quote">
                                 <p>"We brought Bronco to Nantucket with us this week and he is just the most well behaved dog, we are so thankful for your training. He went on the ferry with us and was by far the most patient and chill compared to all of the other full grown dogs that were also on the boat. We really are so impressed. Thank you so much again."</p>
@@ -585,7 +572,7 @@
             
             <!-- Link to Yelp Reviews -->
             <div class="testimonials-external-link">
-                <a href="https://www.yelp.com/biz/the-new-york-dog-trainer-new-york" class="btn-secondary" target="_blank" rel="noopener">See Our Reviews on Yelp</a>
+                <a href="https://www.yelp.com/biz/the-new-york-dog-trainer-new-york" class="btn-secondary" target="_blank" rel="noopener" onclick="gtag('event', 'reviews_click', {'event_category': 'engagement', 'event_label': 'yelp'});">See Our Reviews on Yelp</a>
             </div>
         </div>
     </section>
@@ -599,8 +586,7 @@
             </div>
             
             <div class="contact-content">
-                <form class="contact-form" action="https://formspree.io/f/mkogynpr" method="POST">
-                    <!-- Formspree redirect after submission - update this URL when you know your domain -->
+                <form class="contact-form" action="https://formspree.io/f/mkogynpr" method="POST" onsubmit="gtag('event', 'form_submit', {'event_category': 'conversion', 'event_label': 'contact_form'});">
                     <input type="hidden" name="_next" value="./contact-thank-you.html">
                     
                     <div class="form-row">
@@ -638,15 +624,15 @@
                     <div class="contact-methods">
                         <div class="contact-method">
                             <strong>Book Directly:</strong>
-                            <a href="https://nydogtrainer.simplybook.me/v2/#book" target="_blank">nydogtrainer.simplybook.me</a>
+                            <a href="https://nydogtrainer.simplybook.me/v2/#book" target="_blank" onclick="gtag('event', 'booking_click', {'event_category': 'conversion', 'event_label': 'contact_section'});">nydogtrainer.simplybook.me</a>
                         </div>
                         <div class="contact-method">
                             <strong>Email:</strong>
-                            <a href="mailto:info@nydogtrainer.com">info@nydogtrainer.com</a>
+                            <a href="mailto:info@nydogtrainer.com" onclick="gtag('event', 'contact_click', {'event_category': 'contact', 'event_label': 'email'});">info@nydogtrainer.com</a>
                         </div>
                         <div class="contact-method">
                             <strong>Instagram:</strong>
-                            <a href="https://www.instagram.com/nyraythedogtrainer/" target="_blank">@nyraythedogtrainer</a>
+                            <a href="https://www.instagram.com/nyraythedogtrainer/" target="_blank" onclick="gtag('event', 'social_click', {'event_category': 'social', 'event_label': 'instagram'});">@nyraythedogtrainer</a>
                         </div>
                         <div class="contact-method">
                             <strong>Service Areas:</strong>
@@ -667,7 +653,7 @@
                 <p>Want to be the first to know when we open? Join our email list.</p>
                 
                 <!-- Brevo Newsletter Signup Form -->
-                <form class="email-signup" method="POST" action="https://d94c9e48.sibforms.com/serve/MUIFAIIVLfhC4pFzdYN1TaTHDZKsF0pVcagVJisNwfnoweWuzqmLYSHHsBFS0VYEWZD5ou5lGCB_nGRzz9sXKwYr2HNI9u1b2dLlfmrIyOlWDKf8SClFoGWZUJKwGuBcR1NvD4TW3NHLsf4r0mI2RZ_-HJg-eV4XJg0UC_d_g32j577yVr-maC1R_Ge4g1KDIoxXvYjco8Vc_EIQIA==">
+                <form class="email-signup" method="POST" action="https://d94c9e48.sibforms.com/serve/MUIFAIIVLfhC4pFzdYN1TaTHDZKsF0pVcagVJisNwfnoweWuzqmLYSHHsBFS0VYEWZD5ou5lGCB_nGRzz9sXKwYr2HNI9u1b2dLlfmrIyOlWDKf8SClFoGWZUJKwGuBcR1NvD4TW3NHLsf4r0mI2RZ_-HJg-eV4XJg0UC_d_g32j577yVr-maC1R_Ge4g1KDIoxXvYjco8Vc_EIQIA==" onsubmit="gtag('event', 'newsletter_signup', {'event_category': 'engagement', 'event_label': 'facility_updates'});">
                   <input type="email" name="EMAIL" placeholder="Your email address" required />
                   <button type="submit" class="btn-primary">Keep Me Updated</button>
                   <input type="text" name="email_address_check" value="" style="position: absolute; left: -5000px;" aria-hidden="true" tabindex="-1">
@@ -695,7 +681,7 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#team">Meet the Team</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="gear.html">Gear Recommendations</a></li>
+                        <li><a href="gear.html" onclick="gtag('event', 'gear_page_click', {'event_category': 'navigation', 'event_label': 'footer'});">Gear Recommendations</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -703,8 +689,8 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="https://nydogtrainer.simplybook.me/v2/#book" target="_blank">Book Now</a></li>
-                        <li><a href="https://www.instagram.com/nyraythedogtrainer/" target="_blank">Instagram</a></li>
+                        <li><a href="https://nydogtrainer.simplybook.me/v2/#book" target="_blank" onclick="gtag('event', 'booking_click', {'event_category': 'conversion', 'event_label': 'footer'});">Book Now</a></li>
+                        <li><a href="https://www.instagram.com/nyraythedogtrainer/" target="_blank" onclick="gtag('event', 'social_click', {'event_category': 'social', 'event_label': 'instagram_footer'});">Instagram</a></li>
                         <li><a href="#contact">Email Us</a></li>
                     </ul>
                 </div>
@@ -723,7 +709,7 @@
         </svg>
     </button>
 
-    <!-- Swiper     <!-- Swiper JS for testimonials carousel -->
+    <!-- Swiper JS for testimonials carousel -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <!-- Main JavaScript -->
