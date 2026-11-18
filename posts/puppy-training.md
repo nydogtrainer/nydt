@@ -1,26 +1,20 @@
 ---
-layout: layouts/post.njk
-permalink: /blog/puppy-training/index.html
-
-title: "The Complete Guide to Puppy Training"
-metaTitle: "The Complete Guide to Puppy Training | New York Dog Trainer"
-metaDescription: "Learn the foundations of puppy training, from basic commands to building healthy habits."
-
-slug: "puppy-training"
+title: The Complete Guide to Puppy Training for everyone
+metaTitle: The Complete Guide to Puppy Training | New York Dog Trainer
+metaDescription: Learn the foundations of puppy training, from basic commands to building healthy habits.
+slug: puppy-training
 date: 2026-11-18
-
+featuredImage: https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D
+featuredImageAlt: A golden retriever sitting outdoors
 categories:
   - Puppy Training
-
 tags:
   - Puppy
   - Basic Commands
   - Dog Training
-
-excerpt: "Learn the foundations of puppy training, from basic commands to building healthy habits."
-
-featuredImage: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-featuredImageAlt: "A golden retriever sitting outdoors"
+excerpt: Learn the foundations of puppy training, from basic commands to building healthy habits.
+layout: layouts/post.njk
+permalink: /blog/puppy-training/index.html
 ---
 
 Bringing a puppy home is an exciting experience. It is also the beginning of an important learning journey.
