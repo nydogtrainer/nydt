@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+---
+
+<main class="blog-article-page">
+
+    <article class="blog-article">
+
+        <!-- Article Header -->
+        <header class="blog-article-header">
+
+            <a href="/blog/" class="blog-back-link">
+                &larr; Back to Blog
+            </a>
+
+           {% if categories %}
+    <div class="blog-categories">
+        {% for category in categories %}
+            <a href="/blog/category/{{ category | slugify }}/" class="blog-category">
+                {{ category }}
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}
+
+            <h1>{{ title }}</h1>
+
+            {% if excerpt or metaDescription %}
+                <p class="blog-article-description">
+                    {{ excerpt or metaDescription }}
+                </p>
+            {% endif %}
+
+            <div class="blog-article-meta">
+    <span>New York Dog Trainer</span>
+    <span class="blog-meta-divider">•</span>
+    <time datetime="{{ page.date | htmlDateString }}">
+        {{ page.date | readableDate }}
+    </time>
+</div>
+
+        </header>
+
+        <!-- Featured Image -->
+        {% if featuredImage %}
+            <figure class="blog-featured-image-wrapper">
+                <img
+                    class="blog-featured-image"
+                    src="{{ featuredImage }}"
+                    alt="{{ featuredImageAlt }}"
+                >
+            </figure>
+        {% endif %}
+
+        <!-- Article Body -->
+        <div class="blog-article-content">
+            {{ content | safe }}
+        </div>
+
+        <!-- Article Tags -->
+        {% if tags %}
+    <div class="blog-article-tags">
+        <span class="blog-tags-heading">Tags:</span>
+
+        {% for tag in tags %}
+            <a href="/blog/tag/{{ tag | slugify }}/" class="blog-tag">
+                {{ tag }}
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}
+
+        <!-- Article Footer -->
+        <footer class="blog-article-footer">
+            <a href="/blog/">&larr; Explore More Articles</a>
+        </footer>
+
+    </article>
+
+</main>

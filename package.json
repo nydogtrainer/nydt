@@ -1,0 +1,24 @@
+{
+  "name": "nydt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+ "scripts": {
+  "build": "eleventy",
+  "start": "eleventy --serve"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nydogtrainer/nydt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nydogtrainer/nydt/issues"
+  },
+  "homepage": "https://github.com/nydogtrainer/nydt#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}

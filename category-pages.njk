@@ -1,0 +1,13 @@
+---
+pagination:
+    data: collections.categories
+    size: 1
+    alias: categoryName
+permalink: "/blog/category/{{ categoryName | slugify }}/index.html"
+layout: layouts/archive.njk
+eleventyComputed:
+    archiveTitle: "{{ categoryName }}"
+    archiveName: "{{ categoryName }}"
+    archiveType: "category"
+    archiveDescription: "{{ categoryName }}"
+---

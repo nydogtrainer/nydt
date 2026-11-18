@@ -1,0 +1,85 @@
+
+# Sveltia CMS configuration
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: nydogtrainer/nydt
+  branch: feature/eleventy-sveltia-blog
+  auth_methods:
+    - oauth
+  base_url: https://sveltia-cms-auth.singlaanush18.workers.dev
+
+media_folder: /images/blog
+public_folder: /images/blog
+
+collections:
+  - name: posts
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: /posts
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}"
+
+    fields:
+      - label: Blog Title
+        name: title
+        widget: string
+
+      - label: Meta Title
+        name: metaTitle
+        widget: string
+        required: true
+
+      - label: Meta Description
+        name: metaDescription
+        widget: text
+        required: true
+
+      - label: URL Slug
+        name: slug
+        widget: string
+        required: true
+
+      - label: Publication Date
+        name: date
+        widget: datetime
+        type: date
+
+      - label: Featured Image
+        name: featuredImage
+        widget: image
+        required: false
+
+      - label: Featured Image ALT Text
+        name: featuredImageAlt
+        widget: string
+        required: false
+
+      - label: Categories
+        name: categories
+        widget: list
+        field:
+          label: Category
+          name: category
+          widget: string
+
+      - label: Tags
+        name: tags
+        widget: list
+        field:
+          label: Tag
+          name: tag
+          widget: string
+
+      - label: Excerpt
+        name: excerpt
+        widget: text
+
+      - label: Article Content
+        name: body
+        widget: markdown

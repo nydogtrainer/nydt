@@ -1,0 +1,138 @@
+---
+layout: layouts/base.njk
+---
+
+<main class="blog-archive-page">
+
+    <section class="blog-archive-hero">
+        <div class="blog-archive-hero-inner">
+
+            <a href="/blog/" class="blog-back-link">
+                &larr; Back to Blog
+            </a>
+
+            <p class="blog-eyebrow">
+                THE NEW YORK DOG TRAINER JOURNAL
+            </p>
+
+            <h1>{{ archiveTitle }}</h1>
+
+            <p class="blog-archive-description">
+                Explore expert advice, practical tips and helpful resources about {{ archiveDescription }}.
+            </p>
+
+            <div class="blog-archive-count">
+                {% set articleCount = 0 %}
+                {% for post in collections.posts %}
+                    {% set matches = false %}
+
+                    {% if archiveType == "category" %}
+                        {% for category in post.data.categories or [] %}
+                            {% if category == archiveName %}
+                                {% set matches = true %}
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% for tag in post.data.tags or [] %}
+                            {% if tag == archiveName %}
+                                {% set matches = true %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if matches %}
+                        {% set articleCount = articleCount + 1 %}
+                    {% endif %}
+                {% endfor %}
+                Explore articles in this collection
+            </div>
+
+        </div>
+    </section>
+
+    <section class="blog-listing-section">
+
+        <div class="blog-section-heading">
+            <p class="blog-eyebrow">CURATED FOR YOU</p>
+            <h2>Explore Articles</h2>
+        </div>
+
+        <div class="blog-grid">
+
+            {% for post in collections.posts %}
+
+                {% set matches = false %}
+
+                {% if archiveType == "category" %}
+                    {% for category in post.data.categories or [] %}
+                        {% if category == archiveName %}
+                            {% set matches = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {% for tag in post.data.tags or [] %}
+                        {% if tag == archiveName %}
+                            {% set matches = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                {% if matches %}
+                    <article class="blog-card">
+
+                        <a href="{{ post.url }}" class="blog-card-image-link">
+                            {% if post.data.featuredImage %}
+                                <img
+                                    class="blog-card-image"
+                                    src="{{ post.data.featuredImage }}"
+                                    alt="{{ post.data.featuredImageAlt }}"
+                                    loading="lazy"
+                                >
+                            {% endif %}
+                        </a>
+
+                        <div class="blog-card-content">
+
+                            {% if post.data.categories %}
+                                <div class="blog-card-categories">
+                                    {% for category in post.data.categories %}
+                                        <a href="/blog/category/{{ category | slugify }}/">
+                                            {{ category }}
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+
+                            <h3>
+                                <a href="{{ post.url }}">{{ post.data.title }}</a>
+                            </h3>
+
+                            <p class="blog-card-description">
+                                {{ post.data.excerpt or post.data.metaDescription }}
+                            </p>
+
+                            <div class="blog-card-footer">
+                                <time datetime="{{ post.date | htmlDateString }}">
+                                    {{ post.date | readableDate }}
+                                </time>
+
+                                <a href="{{ post.url }}" class="blog-read-more">
+                                    Read Article &rarr;
+                                </a>
+                            </div>
+
+                        </div>
+                    </article>
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+        <div class="blog-archive-footer">
+            <a href="/blog/">&larr; Explore All Articles</a>
+        </div>
+
+    </section>
+
+</main>

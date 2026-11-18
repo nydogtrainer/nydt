@@ -1,0 +1,102 @@
+---
+layout: layouts/base.njk
+title: "Dog Training Blog | New York Dog Trainer"
+metaTitle: "Dog Training Blog | New York Dog Trainer"
+metaDescription: "Expert dog training advice, puppy tips and practical guides for a happier relationship with your dog."
+permalink: /blog/index.html
+---
+
+<main class="blog-listing-page">
+
+    <!-- Blog Introduction -->
+    <section class="blog-hero">
+        <div class="blog-hero-inner">
+            <p class="blog-eyebrow">THE NEW YORK DOG TRAINER JOURNAL</p>
+
+            <h1>Better Training.<br>Stronger Relationships.</h1>
+
+            <p class="blog-hero-description">
+                Practical advice, expert insights and helpful resources
+                to help you understand your dog and build a stronger bond.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Articles -->
+    <section class="blog-listing-section">
+
+        <div class="blog-section-heading">
+            <div>
+                <p class="blog-eyebrow">EXPLORE OUR ARTICLES</p>
+                <h2>Latest from the Blog</h2>
+            </div>
+        </div>
+
+        <div class="blog-grid">
+
+            {% for post in collections.posts %}
+
+                <article class="blog-card">
+
+                    <a href="{{ post.url }}" class="blog-card-image-link">
+
+                        {% if post.data.featuredImage %}
+                            <img
+                                class="blog-card-image"
+                                src="{{ post.data.featuredImage }}"
+                                alt="{{ post.data.featuredImageAlt }}"
+                                loading="lazy"
+                            >
+                        {% endif %}
+
+                    </a>
+
+                    <div class="blog-card-content">
+
+                        {% if post.data.categories %}
+                            <div class="blog-card-categories">
+                                {% for category in post.data.categories %}
+                                    <span>{{ category }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <h3>
+                            <a href="{{ post.url }}">
+                                {{ post.data.title }}
+                            </a>
+                        </h3>
+
+                        <p class="blog-card-description">
+                            {{ post.data.excerpt or post.data.metaDescription }}
+                        </p>
+
+                        <div class="blog-card-footer">
+
+                            <time datetime="{{ post.date | htmlDateString }}">
+                                {{ post.date | readableDate }}
+                            </time>
+
+                            <a href="{{ post.url }}" class="blog-read-more">
+                                Read Article &rarr;
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+        {% if collections.posts.length == 0 %}
+            <p class="blog-empty-message">
+                New articles are coming soon. Check back for helpful dog training advice.
+            </p>
+        {% endif %}
+
+    </section>
+
+</main>
