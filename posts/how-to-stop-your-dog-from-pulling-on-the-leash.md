@@ -4,6 +4,7 @@ metaTitle: How to Stop Your Dog from Pulling on the Leash | New York Dog Trainer
 metaDescription: Learn practical, reward-based techniques to stop leash pulling and make daily walks with your dog more enjoyable.
 slug: loose-leash-walking
 date: 2026-11-18
+featured: true
 featuredImage: https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D
 featuredImageAlt: Dog enjoying an outdoor walk with its owner
 categories:
